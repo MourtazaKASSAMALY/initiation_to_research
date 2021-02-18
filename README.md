@@ -50,7 +50,7 @@ colcon build --symlink-install
 
 * MCTSClass.py: Python class implementing a Monte Carlo Tree
 * MCTSPlannerClass.py: Python class implementing Monte Carlo Tree Search algorithm
-* mctsplanner.py: ROS2 Node sending targets computed by MCTSPLannerClass one by one to the controller node
+* mctsplanner.py: ROS2 Node sending targets computed by MCTSPlannerClass one by one to the controller node
 
 * controller.py: ROS2 Node sending heading to the car to reach target point using artificial potential field
 * car.py: ROS2 Node simulating a Dubin's vehicle
