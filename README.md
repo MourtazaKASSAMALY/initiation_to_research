@@ -83,7 +83,7 @@ plot_results.py: plot results
 
 - [x] Generate scenarios : In the ~/ws_ros2/src/initiation_to_research/data folder, open "generate_scenarios.py", fix maximum number of targets and numbers of simulations then run it to generate "scenarios.txt"
 
- [x]Launch simulations : In the ~/ws_ros2/src/initiation_to_research/initiation_to_research folder, open "logger.py" and fix the mode between "ACO" or "MCTS" (self.mode variable), then launch the logger node: 
+ [x] Launch simulations : In the ~/ws_ros2/src/initiation_to_research/initiation_to_research folder, open "logger.py" and fix the mode between "ACO" or "MCTS" (self.mode variable), then launch the logger node: 
 
 ``` bash
 ros2 launch initiation_to_research launch_logger.launch.py
