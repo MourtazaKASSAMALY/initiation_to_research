@@ -62,10 +62,10 @@ colcon build --symlink-install
 
 * launch_aco_simulations.launch.py : launch an ACO algorithm simulation
 * launch_aco_simulations.sh: script launching the ACO simulation
-* 
+
 * launch_aco_mcts.launch.py : launch a MCTS algorithm simulation
 * launch_aco_mcts.sh: script launching the MCTS simulation
-* 
+ 
 * launch_logger.launch.py: Launch alternatively an ACO or MCTS simulation by sending a scenario index to load
 
 ## data: 
