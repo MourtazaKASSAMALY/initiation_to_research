@@ -24,14 +24,14 @@ class DisplayNode(Node):
 		self.targets = []
 
 		# Initialize and clear ax
-		"""self.xmin, self.xmax, self.ymin, self.ymax = -1, 16, -1, 16
+		self.xmin, self.xmax, self.ymin, self.ymax = -1, 16, -1, 16
 		self.fig = plt.figure(0)
 		self.ax = self.fig.add_subplot(111, aspect='equal')	
 		self.ax.xmin, self.ax.xmax, self.ax.ymin, self.ax.ymax = self.xmin, self.xmax, self.ymin, self.ymax
 		plt.pause(0.001)
 		plt.cla()
 		self.ax.set_xlim(self.ax.xmin, self.ax.xmax)
-		self.ax.set_ylim(self.ax.ymin, self.ax.ymax)"""
+		self.ax.set_ylim(self.ax.ymin, self.ax.ymax)
 
 		self.subscriber_state = self.create_subscription(Pose2D, 'state', self.callback_state, 0)
 		self.subscriber_target = self.create_subscription(Point, 'target', self.callback_target, 0)
@@ -41,7 +41,7 @@ class DisplayNode(Node):
 		self.get_logger().info('Initialisation complete')
 
 	# ----------------------- Drawing functions -----------------------
-	"""
+	
 	# Dessin du champ de vecteurs
 	def draw_field(self):
 		Mx = np.arange(self.xmin, self.xmax, 0.5)
@@ -79,7 +79,7 @@ class DisplayNode(Node):
 		for target in self.targets: self.ax.plot(target[0, 0], target[1, 0], "go", markersize=10)  # targets
 		self.ax.plot(self.phat[0, 0], self.phat[1, 0], 'go', markeredgecolor='black', markersize=10)  # target
 		self.ax.plot(0, 0, 'bo', markersize=10)  # origin
-	"""
+	
 	# ----------------------- Callback for ROS Topics -----------------------
 
 	def callback_state(self, msg):  # car state listener
@@ -87,9 +87,9 @@ class DisplayNode(Node):
 		self.posy = msg.y
 		self.yaw = msg.theta  # yaw
 
-		# self.draw_tank('red', 0.2)
-		# self.draw_field()  # champ de vecteurs
-		# self.draw_objectives()  # dessin des obstacles et des cibles 
+		self.draw_tank('red', 0.2)
+		self.draw_field()  # champ de vecteurs
+		self.draw_objectives()  # dessin des obstacles et des cibles 
 
 	def callback_target(self, msg):  # target location 
 		self.phat[0, 0] = msg.x
