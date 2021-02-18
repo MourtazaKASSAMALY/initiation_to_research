@@ -55,7 +55,7 @@ colcon build --symlink-install
 * controller.py: ROS2 Node sending heading to the car to reach target point using artificial potential field
 * car.py: ROS2 Node simulating a Dubin's vehicle
 
-* display.py: ROS2 Node displaying the car, the targets and the the potential field
+* display.py: ROS2 Node displaying the car, the targets and the potential field
 * logger.py: Launch simulations using ACO or MCTS Algorithm and log results
 
 ## launch folder:
