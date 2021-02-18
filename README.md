@@ -68,7 +68,7 @@ colcon build --symlink-install
  
 * launch_logger.launch.py: Launch alternatively an ACO or MCTS simulation by sending a scenario index to load
 
-## data: 
+## data folder: 
 
 * generate_scenarios.py: generate scenarios to be loaded in later simulations
 
