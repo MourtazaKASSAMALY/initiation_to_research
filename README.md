@@ -75,9 +75,9 @@ launch_logger.launch.py: Launch alternatively an ACO or MCTS simulation by sendi
 
 ## data: 
 
-generate_scenarios.py: generate scenarios to be loaded in later simulations
+* generate_scenarios.py: generate scenarios to be loaded in later simulations
 
-plot_results.py: plot results
+* plot_results.py: plot results
 
 # Package usage
 
