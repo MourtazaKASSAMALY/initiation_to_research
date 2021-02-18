@@ -27,8 +27,8 @@ class LoggerNode(Node):
 
 		self.scenario_index = 0
 		self.costs = []
-		self.mode = "ACO"
-		# self.mode = "MCTS"
+		# self.mode = "ACO"
+		self.mode = "MCTS"
 
 		self.path_mcts = str(pathlib.Path(__file__).parent.absolute().parent.absolute().parent.absolute().parent.absolute()) + \
 			"/src/initiation_to_research/data/mcts_results.txt"
@@ -48,6 +48,7 @@ class LoggerNode(Node):
 
 		self.costs.append(msg.data)
 		self.scenario_index += 1
+		print(self.costs)
 		
 		if self.scenario_index == self.max_scenarios:
 			if self.mode == "ACO": 

@@ -2,7 +2,10 @@ import json
 from matplotlib import pyplot as plt
 import numpy as np
 
-    
+
+# ---------------------------------------------------------
+
+
 with open("scenarios.txt", 'r') as f: targets_scenarios = json.loads(f.read())
 
 nb_scenarios = len(targets_scenarios)
@@ -29,6 +32,10 @@ for i in range(2, max_targets+1):
 for i in range(len(L_mcts)):
     L_mcts[i] = np.mean(L_mcts[i])
     L_aco[i] = np.mean(L_aco[i])
+
+
+# ---------------------------------------------------------
+
 
 plt.figure(figsize=(20, 10))
 # plt.ylim(25, 75)
