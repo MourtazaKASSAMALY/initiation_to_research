@@ -84,8 +84,12 @@ colcon build --symlink-install
 ros2 launch initiation_to_research launch_logger.launch.py
 ```
 
-- [ ] Results are saved in aco_results.txt or mcts_results.txt depending on the mode you chose and can be plot by running the "plot_results.py" and see graph saved as "ACO_VS_MCTS.png" in the same folder.
+- [ ] Results are saved in aco_results.txt or mcts_results.txt depending on the mode you chose and can be plot by running the "plot_results.py" and see graph saved as "MCTS_VS_ACO.png" in the same folder.
 
 # Tips
 
-Monitor RAM usage by running $free -h and check that there is no major leak during simulations
+Monitor RAM usage and check that there is no major leak during simulations :
+
+``` bash
+free -h 
+```
