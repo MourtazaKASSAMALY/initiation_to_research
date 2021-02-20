@@ -3,6 +3,9 @@ from matplotlib import pyplot as plt
 import numpy as np
 
 
+plt.style.use(['science','ieee'])
+
+
 # ---------------------------------------------------------
 
 
@@ -37,14 +40,14 @@ for i in range(len(L_mcts)):
 # ---------------------------------------------------------
 
 
-plt.figure(figsize=(20, 10))
+# plt.figure(figsize=(40, 40))
 # plt.ylim(25, 75)
 
-font = {'family': 'serif', 'color':  'black', 'weight': 'normal', 'size': 16}
-        
-plt.title("Travelled distance VS. Number of waypoints", fontdict=font)
-plt.xlabel("Number of waypoints", fontdict=font)
-plt.ylabel("Average travelled distance across " + str(simulations_per_scenarios) + " simulations", fontdict=font)
+# font = {'family': 'serif', 'color':  'black', 'weight': 'normal', 'size': 32}
+
+# plt.title("Travelled distance VS. Number of targets", fontdict=font)
+plt.xlabel("Number of targets")  # fontdict=font
+plt.ylabel("Average travelled distance")  # fontdict=font
 
 plt.plot(np.arange(2, max_targets+1, 1), L_mcts, label="MCTS", color='green', marker='o')
 plt.plot(np.arange(2, max_targets+1, 1), L_aco, label="ACO", color='blue', marker='o')
@@ -52,12 +55,12 @@ plt.plot(np.arange(2, max_targets+1, 1), L_aco, label="ACO", color='blue', marke
 # Confidence interval across all simulations
 c1 = 1.96 * np.std(L_mcts)/np.mean(L_mcts)  # MCTS
 c2 = 1.96 * np.std(L_aco)/np.mean(L_aco)  # ACO
-
 plt.fill_between(np.arange(2, max_targets+1, 1), (L_mcts-c1), (L_mcts+c1), color='green', alpha=.3)
 plt.fill_between(np.arange(2, max_targets+1, 1), (L_aco-c2), (L_aco+c2), color='blue', alpha=.3)
 
-plt.legend(fontsize="xx-large")
-plt.legend(prop={'family': 'serif', 'size': 16})
+plt.legend()
+# plt.legend(fontsize="x-large")
+# plt.legend(prop={'family': 'serif', 'size': 32})
 
 plt.savefig('MCTS_VS_ACO.png')
 # plt.close()
